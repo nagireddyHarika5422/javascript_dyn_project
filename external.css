@@ -1,0 +1,113 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-heading {
+  flex: 1;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  position: fixed;
+  top: 60px; /* Adjust based on the height of the navbar */
+  bottom: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+}
+
+.sidebar a.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+/* Main Content Styling */
+main {
+  margin-left: 220px; /* Adjust based on sidebar width */
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* Adjust based on navbar height */
+}
+
+form {
+  width: 100%;
+  max-width: 850px; /* Adjust as needed */
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+.login-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #fff;
+  background-color:   black;/*  #007bff; /* Change to your preferred color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Change to a darker shade or different color */
+}

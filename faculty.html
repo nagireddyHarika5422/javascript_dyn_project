@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title>Faculty</title>
+    <link rel="Stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="Stylesheet" href="./external.css">
+    <script src="external.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo v3.png" alt="Logo">
+        </div>
+        <div class="navbar-heading">
+            Faculty
+        </div>
+        <div class="navbar-actions">
+            <div class="navbar-login">
+                <button class="login-button"><a href="admin.html">Login</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="faculty.html" class="active">Add Faculty</a></li>
+            <li><a href="batch.html">Add Batch</a></li>
+            <li><a href="course.html">Add Course</a></li>
+            <li><a href="student.html">Add Students</a></li>
+        </ul>
+    </aside>
+
+    <main class="container mt-4">
+        <section id="add-faculty" class="form-container">
+          
+            <form action="/submit-course" method="POST">
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="fname" name="first-name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number:</label>
+                            <input type="text" id="mobile_num" name="mobile-number" class="form-control" required maxlength="10">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="years-of-experience">Years of Experience:</label>
+                            <input type="text" id="experience" name="years-of-experience" class="form-control" required maxlength="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="pass" name="password" required onblur="validate()" onfocus="validate()">
+                            <p id="message">hii</p>
+                        </div>
+						
+						 <div class="form-group">
+						 <label for="branch">Teaching course</label>
+						 <select id="branch" name="branch" class="form-control" required>
+							<option value="">Select Branch</option>
+							<option value="v1">Java full Stack</option>
+							<option value="v2">Python full stack</option>
+							<option value="v3">A.W.S</option>
+						   <option value="v4">Devops</option>
+						   <option value="v5">Azure</option>
+                         </select>
+                         </div>
+
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="lname" name="last-name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="qualification">Qualification:</label>
+                            <input type="text" id="qualif" name="qualification" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                        
+                            <label for="confirmPassword">Confirm Password:</label>
+                           <input type="password" id="cpass" name="confirmPassword" required onfocus="validate()" onblur="validate()">
+                            
+                        </div>
+						
+						<div class="form-group">
+						<label for="gender">Gender:</label>
+						<select id="gender" name="gender" class="form-control" required>
+						<option value="">Select Gender</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+                        </select>
+                        </div>
+
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+    </main>
+
+
+</body>
+</html>

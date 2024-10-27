@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>Student</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./external.css">
+    <script src="checkvalidations.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-logo">
+        <img src="logo v3.png" alt="Logo">
+    </div>
+    <div class="navbar-heading">
+        Student
+    </div>
+    <div class="navbar-actions">
+        <div class="navbar-login">
+            <button class="login-button">Login</button>
+        </div>
+    </div>
+</nav>
+<aside class="sidebar">
+    <ul>
+        <li><a href="student.html" class="active">Add student</a></li>
+        <li><a href="batch.html">Add batch</a></li>
+        <li><a href="faculty.html">Add faculty</a></li>
+        <li><a href="course.html">Add course</a></li>
+    </ul>
+</aside>
+
+<main class="container mt-4">
+    <section id="add-faculty" class="form-container">
+        <form action="/submit-course" method="POST" id="student-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="fname" name="first-name" class="form-control" required>
+                        <small id="fname-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="text" id="mobile_num" name="mobile-number" class="form-control" required maxlength="10">
+                        <small id="mobile-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="years-of-experience">Year Of Passedout:</label>
+                        <input type="text" id="experience" name="years-of-experience" class="form-control" required maxlength="4">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                        <small id="password-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Branch:</label>
+                        <select id="branch" name="branch" class="form-control" required>
+                            <option value="">Select Branch</option>
+                            <option value="cse">CSE</option>
+                            <option value="ece">ECE</option>
+                            <option value="mech">Mechanical</option>
+                            <option value="civil">Civil</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="lname" name="last-name" class="form-control" required>
+                        <small id="lname-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        <small id="email-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="qualification">Qualification:</label>
+                        <input type="text" id="qualif" name="qualification" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
+                        <small id="confirm-password-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" class="form-control" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
